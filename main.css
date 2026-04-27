@@ -237,11 +237,42 @@
 .trend-list p:hover{
     color:#0033AB
 }
-.trend-img{
+.trend-img{ 
     display: flex;
+    width: 1180px;
+    overflow-x: auto;
     gap: 40px;
+    margin: 3em auto;
+    scroll-behavior:smooth ;
+    anchor-name: --carousel;
+    scroll-snap-type: x mandatory;
+}
+.trend-img::-webkit-scrollbar{
+    display: none;
+}
+.trend-img::scroll-button(right),.trend-img::scroll-button(left){
+    content: '→';
+    border: none;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: plum;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --carousel;
+    position-area:right center ;
+
+    transform: translateY(-100%);
+    translate: -50%;
+}
+.trend-img::scroll-button(left){
+    content: '←';
+   position-area:left center ;
 }
 .trend-img #img {
+    scroll-snap-align: start;
+  flex: 0 0 10em;
   display: flex;
   flex-direction: column;
   justify-content: center;
