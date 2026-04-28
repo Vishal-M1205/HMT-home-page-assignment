@@ -55,3 +55,46 @@ document.querySelector(".slider").addEventListener("mouseleave", startAutoSlide)
 // Init
 showSlide(index);
 startAutoSlide();
+
+
+const slider = document.getElementById("slider");
+const cards = document.querySelectorAll(".card");
+
+const gap = 40; // same as CSS gap
+const cardWidth = cards[0].offsetWidth + gap;
+
+document.getElementById("rightBtn").addEventListener("click", () => {
+  slider.scrollBy({
+    left: cardWidth,
+    behavior: "smooth"
+  });
+});
+
+document.getElementById("leftBtn").addEventListener("click", () => {
+  slider.scrollBy({
+    left: -cardWidth,
+    behavior: "smooth"
+  });
+});
+
+const cardSlider = document.getElementById("sliders");
+const cardItems = document.querySelectorAll(".coll-div");
+
+if (cardItems.length > 0) {
+  const gap = 40;
+  const cardWidth = cardItems[0].offsetWidth + gap;
+
+  document.getElementById("rightBtns").addEventListener("click", () => {
+    cardSlider.scrollBy({
+      left: cardWidth,
+      behavior: "smooth"
+    });
+  });
+
+  document.getElementById("leftBtns").addEventListener("click", () => {
+    cardSlider.scrollBy({
+      left: -cardWidth,
+      behavior: "smooth"
+    });
+  });
+}
