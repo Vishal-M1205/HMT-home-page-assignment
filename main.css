@@ -38,12 +38,36 @@
      cursor: pointer;
 }
 /* second nav bar */
+#menuToggle {
+  display: none;
+  cursor: pointer;
+  margin-left: 20px;
+  border: none;
+  font-size: large;
+  background-color: transparent;
+ 
+}
+.nav-2.scrolled .nav-2-1,
+.nav-2.scrolled .nav-2-2 {
+  display: none;
+}
+.nav-2.scrolled #menuToggle {
+  display: block;
+}
+.nav-2.expanded .nav-2-1,
+.nav-2.expanded .nav-2-2 {
+  display: flex;
+}
+.nav-2-1,
+.nav-2-2 {
+  transition: all 0.3s ease;
+}
 .watch-menu{
     position: relative;
 }
 .nav-2{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 50px;
     height: 65px;
     align-items: center;
@@ -62,7 +86,7 @@
 }
 .watch{
     position: absolute;
-    width: 90vw;
+    width: 70vw;
     height: 300px;
     left: -50%;
     padding: auto;
@@ -138,6 +162,17 @@
 .nav-2 > p:hover{
  border-bottom: #0033ab 2px solid;
 }
+.nav-2-1{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin-left: 100px;
+}
+.nav-2-2{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
 #logo{
    width: 150px;
    height: 31px;
@@ -155,6 +190,7 @@
     width: 20px;
     height: 20px;
     margin-left: 50px;
+    margin-right: 40px;
 }
 .slider {
   position: relative;

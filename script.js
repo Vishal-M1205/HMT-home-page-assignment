@@ -6,7 +6,7 @@ const dotsContainer = document.querySelector(".dots");
 let index = 0;
 let interval;
 
-// Create dots
+
 images.forEach((_, i) => {
   const dot = document.createElement("span");
   dot.addEventListener("click", () => showSlide(i));
@@ -25,7 +25,7 @@ function showSlide(i) {
   dots[index].classList.add("active");
 }
 
-// Next / Prev
+
 function nextSlide() {
   let i = (index + 1) % images.length;
   showSlide(i);
@@ -39,7 +39,7 @@ function prevSlide() {
 nextBtn.addEventListener("click", nextSlide);
 prevBtn.addEventListener("click", prevSlide);
 
-// Auto slide
+
 function startAutoSlide() {
   interval = setInterval(nextSlide, 3000);
 }
@@ -48,11 +48,10 @@ function stopAutoSlide() {
   clearInterval(interval);
 }
 
-// Pause on hover
+
 document.querySelector(".slider").addEventListener("mouseenter", stopAutoSlide);
 document.querySelector(".slider").addEventListener("mouseleave", startAutoSlide);
 
-// Init
 showSlide(index);
 startAutoSlide();
 
@@ -60,7 +59,7 @@ startAutoSlide();
 const slider = document.getElementById("slider");
 const cards = document.querySelectorAll(".card");
 
-const gap = 40; // same as CSS gap
+const gap = 40; 
 const cardWidth = cards[0].offsetWidth + gap;
 
 document.getElementById("rightBtn").addEventListener("click", () => {
@@ -98,3 +97,35 @@ if (cardItems.length > 0) {
     });
   });
 }
+const nav = document.getElementById("navbar");
+const toggleBtn = document.getElementById("menuToggle");
+
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.scrollY;
+
+  // when navbar reaches top (scrolling started)
+  if (currentScroll > 0) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+    nav.classList.remove("expanded"); // reset
+  }
+
+  // hide again when scrolling down
+  if (currentScroll < lastScroll) {
+    nav.classList.remove("expanded");
+  }
+if (currentScroll > lastScroll) {
+    nav.classList.remove("expanded");
+  }
+  lastScroll = currentScroll;
+}
+
+);
+
+// toggle button click
+toggleBtn.addEventListener("click", () => {
+  nav.classList.toggle("expanded");
+});
