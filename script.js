@@ -59,7 +59,7 @@ startAutoSlide();
 const slider = document.getElementById("slider");
 const cards = document.querySelectorAll(".card");
 
-const gap = 40; 
+const gap = 10; 
 const cardWidth = cards[0].offsetWidth + gap;
 
 document.getElementById("rightBtn").addEventListener("click", () => {
@@ -105,15 +105,15 @@ let lastScroll = 0;
 window.addEventListener("scroll", () => {
   const currentScroll = window.scrollY;
 
-  // when navbar reaches top (scrolling started)
+ 
   if (currentScroll > 0) {
     nav.classList.add("scrolled");
   } else {
     nav.classList.remove("scrolled");
-    nav.classList.remove("expanded"); // reset
+    nav.classList.remove("expanded"); 
   }
 
-  // hide again when scrolling down
+ 
   if (currentScroll < lastScroll) {
     nav.classList.remove("expanded");
   }
@@ -125,7 +125,7 @@ if (currentScroll > lastScroll) {
 
 );
 
-// toggle button click
+
 toggleBtn.addEventListener("click", () => {
   nav.classList.toggle("expanded");
 });

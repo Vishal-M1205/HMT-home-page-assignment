@@ -196,7 +196,7 @@
   position: relative;
   width: 100%;
   height: 600px;
-  overflow: hidden;
+  
 }
 
 .images img {
@@ -211,7 +211,7 @@
   opacity: 1;
 }
 
-/* Buttons */
+
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -227,7 +227,7 @@
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* Dots */
+
 .dots {
   position: absolute;
   bottom: 15px;
@@ -256,7 +256,7 @@
     padding: 20px;
     text-transform: uppercase;
   letter-spacing: 2px;
-  margin-top: 60px;
+  margin-top: 30px;
   margin-bottom: 40px;
 }
 
@@ -325,7 +325,7 @@
     align-items: center;
     justify-content: center;
 }
-.trend-pro p{
+.trend-pro p,li{
     font-size: x-large;
     font-weight: bold;
     letter-spacing: 2px;
@@ -337,7 +337,8 @@
     margin-top: 30px;
     margin-bottom: 30px;
 }
-.trend-list p{
+.trend-list li{
+    list-style: none;
     font-size: medium;
     letter-spacing: 0px;
     text-transform: none;
@@ -345,10 +346,10 @@
     transition: color 1s;
     cursor: pointer;
 }
-.trend-list p:nth-child(1){
+.trend-list li:nth-child(1){
     color: #0033AB;
 }
-.trend-list p:hover{
+.trend-list li:hover{
     color:#0033AB
 }
 .card-wrapper {
@@ -369,12 +370,31 @@
 
 .card {
     scroll-snap-align: start;
-  flex: 0 0 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  position: relative;
+}
+.offer{
+    position: absolute;
+    left: 1%;
+    bottom: 90%;
+    background-color: yellow;
+    padding: 5px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#ofs{
+    position: absolute;
+    font-size: smaller;
+    background-color: #0033ab2f;
+    width: 100%;
+    text-align: center;
+    color: red;
+    top: 50%;
+    padding: 10px 0px 10px 0px;
 }
 #rightBtn,#leftBtn{
     border: none;
@@ -389,7 +409,7 @@
 }
 #rightBtn{
     position: absolute;
-    bottom: 50%;
+    bottom: 43%;
     left: 98%;
 }
 #leftBtn{
@@ -544,10 +564,12 @@
 }
 .coll-img{
     display: flex;
-    gap: 40px;
+    gap: 10px;
+    width: 1070px;
     overflow-x: auto;
     scroll-behavior:smooth ;
     scroll-snap-type: x mandatory;
+    
 }
 .coll-img::-webkit-scrollbar{
     display: none;
@@ -577,6 +599,17 @@
     letter-spacing: 2px;
     color: grey;
     font-weight: 500;
+    position: relative;
+}
+#ofs-coll{
+    position: absolute;
+    font-size: smaller;
+    background-color: #0033ab2f;
+    width: 100%;
+    text-align: center;
+    color: red;
+    top: 70%;
+    padding: 10px 0px 10px 0px;
 }
 #rightBtns,#leftBtns{
     border: none;
@@ -591,8 +624,8 @@
 }
 #rightBtns{
     position: absolute;
-    bottom: 50%;
-    left: 98%;
+    bottom: 40%;
+    left: 94%;
 }
 #leftBtns{
     position: absolute;
@@ -714,7 +747,7 @@
     padding: 20px;
     justify-content: center;
     align-items: start;
-    gap: 80px;
+    gap: 90px;
     color: white;
     background-color: #0033AB;
 }
@@ -724,6 +757,8 @@
     font-weight: 300;
     padding-top: 7px;
     padding-bottom: 7px;
+    text-transform: capitalize;
+    letter-spacing: 0px;
 }
 .footer h4{
     letter-spacing: 1px;
@@ -747,4 +782,172 @@
     width: 25px;
     height: 25px;
     cursor: pointer;
+}
+
+.footer li{
+    cursor: pointer;
+}
+
+@media (max-width: 480px){
+    
+   .nav-1{
+    flex-direction: column;
+    text-align: start;
+    gap: 5px;
+   }  
+   #l-nav{
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: x-small;
+   }
+   #lang{
+    width: auto;
+   }
+   #lang option{
+    font-size: xx-small;
+   }
+   .nav-2-1{
+    display: none;
+    gap: 10px;
+    font-size: xx-small;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+   }
+  .nav-2-2{
+    display: none;
+    gap: 10px;
+    font-size: xx-small;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+  }
+   
+   .nav-2 #menuToggle {
+  display: block;
+
+}
+.nav-2{
+    position: sticky ;
+    top: 0;
+    overflow-x: scroll;
+    gap: 30px;
+}
+.slider{
+    max-height: 300px;
+}
+.ribbon-1{
+    font-size: small;
+    font-weight: 800px;
+}
+.shopFor-img{
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.men-image img{
+    height: 300px;
+    width: 300px;
+}
+.women-image img{
+    height: 300px;
+    width: 300px;
+}
+.trend-pro{
+box-sizing: content-box;
+}
+.trend-list{
+    margin-left: 10px;
+    width: 80vw;
+    gap: 20px;
+    overflow-x: scroll;
+    margin-bottom: 10px;
+   
+}
+.trend-list p,li{
+     font-size: small;
+     white-space: nowrap;
+}
+.card-wrapper{
+    width: 250px;
+}
+.coll-img{
+    width: 250px;
+}
+.explore-watch{
+    padding-top: 0px;
+}
+#exp-img,#coll-ban-img,#end-ban-img{
+    width: 100vw;
+}
+.explore-watch #play-button{
+    width: 40px;
+    height: 40px;
+    bottom: 30px;
+}
+.hmt-coll{
+    gap: 0px;
+}
+.hmt-coll h1{
+    gap: 0px;
+    margin: 0px;
+}
+#coll-ban-text{
+    margin-left: 10px;
+    width: 40%;
+    bottom: 20%;
+}
+#coll-ban-text p{
+    margin-bottom: 5px;
+    font-size: xx-small;
+    display: none;
+}
+#coll-ban-text h2{
+    font-size: smaller;
+    margin-bottom: 10px;
+}
+#coll-ban-text button{
+    font-size: xx-small;
+    padding: 10px;
+}
+.hmt-desc{
+ padding: 45px 20px 35px 20px;
+ font-size: small;
+ letter-spacing: 0px;
+ line-height: 20px;
+ text-align: left;
+}
+.desc-but{
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: auto;
+    margin-top: 20px;
+}
+.end-ban-text{
+   left: 68%;
+   bottom: 30%;
+}
+.end-ban-text p{
+    display: none;
+}
+.end-ban-text h2{
+    font-size: small;
+}
+.end-ban-text button{
+    font-size: x-small;
+    margin-top: 10px;
+     padding: 5px 10px 5px 10px;
+}
+.footer{
+    flex-direction: column;
+    gap: 30px;
+}
+#sup{
+    display: none;
+}
 }
