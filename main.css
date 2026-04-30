@@ -5,7 +5,28 @@
     font-family: "Poppins";
     margin:0;
     box-sizing: border-box;
+    
 }
+/* body{
+    position: relative;
+} */
+.up-arr{
+    padding: 10px 20px 10px 20px;
+    font-size: large;
+    color: white;
+    background-color: black;
+    float: right;
+    right: 5%;
+    bottom: 10%;
+    position: fixed;
+    z-index: 1090;
+    display: none;
+    cursor: pointer;
+}
+.show-arr{
+  display: block;
+}
+
 /* first navbar css */
 .nav-1{
     display: flex;
@@ -14,6 +35,7 @@
     color: white;
     justify-content: space-between;
     font-size: 14px;
+    width: 100vw;
 }
 #l-nav{
     display: flex;
@@ -79,7 +101,7 @@
     letter-spacing: 2px;
     background-color: white;
     z-index: 999;
-
+    
 }
 .nav-2 img{
     cursor: pointer;
@@ -96,6 +118,7 @@
     border-radius: 10px;
     box-shadow: 5px 5px 20px black;
     display: none;
+    font-size: medium;
     
 }
 .watch-options{
@@ -124,6 +147,8 @@
     color: grey;
     cursor: pointer;
      transition: 0.5s;
+    text-transform: capitalize;
+     font-size: medium;
 }
 .w1 li:hover{
     color: #0033abae;
@@ -280,8 +305,8 @@
     position: relative;
 }
 .men-image img{
-  height: 370px;
-  width: 370px;
+  max-height: 370px;
+  max-width: 370px;
   border-radius: 20px;
   box-shadow: 2px 2px 10px black;
 }
@@ -301,8 +326,8 @@
    
 }
 .women-image img{
-  height: 370px;
-  width: 370px;
+  max-height: 370px;
+  max-width: 370px;
   border-radius: 20px;
    box-shadow: 2px 2px 10px black;
 }
@@ -353,7 +378,7 @@
     color:#0033AB
 }
 .card-wrapper {
-  width: 1140px;
+  width: 74vw;
   margin: 3em auto;
   position: relative;
 }
@@ -418,8 +443,8 @@
     right: 100%;
 }
 #img img{
-    width: 230px;
-    height: 250px;
+    max-width: 230px;
+    max-height: 250px;
     transition: transform 0.5s;
 }
 #pro-name{
@@ -438,12 +463,41 @@
 #img img:hover{
     transform: scale(1.5);
 }
+.tooltip{
+    position: relative;
+    display: inline-block;
+}
+.tooltip-text{
+   position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.tooltip:hover .tooltip-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 #opt1{
     display: flex;
     gap: 40px;
    margin-bottom: 30px;
    margin-top: 20px;
 }
+
 #opt2{
     display: flex;
     gap: 40px;
@@ -546,6 +600,9 @@
     bottom: 170px;
     filter: drop-shadow(5px 5px 20px black);
 }
+.explore-watch img{
+    width: 100vw;
+}
 
 .hmt-coll{
     display: flex;
@@ -565,7 +622,7 @@
 .coll-img{
     display: flex;
     gap: 10px;
-    width: 1070px;
+    width: 70vw;
     overflow-x: auto;
     scroll-behavior:smooth ;
     scroll-snap-type: x mandatory;
@@ -635,6 +692,9 @@
 .coll-ban{
     margin-top: 40px;
     position: relative;
+}
+#coll-ban-img{
+    width: 100vw;
 }
 #coll-ban-text{
     position: absolute;
@@ -788,7 +848,7 @@
     cursor: pointer;
 }
 
-@media (max-width: 480px){
+@media (max-width: 540px){
     
    .nav-1{
     flex-direction: column;
@@ -949,5 +1009,54 @@ box-sizing: content-box;
 }
 #sup{
     display: none;
+}
+
+}
+
+@media (max-width: 1024px){
+.nav-2{
+    white-space: nowrap;
+    gap: 30px;
+}
+.nav-2-1{
+    margin-left: 10px;
+   gap: 10px;
+}
+.nav-2-2{
+    gap: 10px;
+}
+
+#search{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.explore-watch #play-button{
+    bottom: 20%;
+}
+/* #coll-img-div img{
+    max-width: 200px;
+    max-height: 220px;
+} */
+#rightBtns{
+    left: 98%;
+}
+#coll-ban-text p {
+ display: none;
+}
+#coll-ban-text h2{
+    margin-bottom: 10px;
+}
+.hmt-desc{
+    padding: 50px 100px 50px 100px;
+}
+.end-ban-text p{
+    display: none;
+}
+.end-ban-text {
+    margin-top: 60px;
+}
+.end-ban-text button{
+    margin-top: 10px;
 }
 }

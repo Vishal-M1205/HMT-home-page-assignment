@@ -129,3 +129,23 @@ if (currentScroll > lastScroll) {
 toggleBtn.addEventListener("click", () => {
   nav.classList.toggle("expanded");
 });
+
+const arrow = document.getElementById('arr-up');
+
+window.addEventListener('scroll',()=>{
+  const currentScroll = window.scrollY;
+  if(currentScroll > 0){
+    arrow.classList.add('show-arr');
+  }
+  else{
+    arrow.classList.remove('show-arr');
+  }
+
+})
+
+arrow.addEventListener('click',()=>{
+   window.scrollTo({
+    top:0,
+    behavior:"smooth"
+   })
+})
