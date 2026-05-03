@@ -104,7 +104,8 @@ let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
   const currentScroll = window.scrollY;
-
+  const search = document.getElementById('search');
+  search.style.display = "block"
  
   if (currentScroll > 0) {
     nav.classList.add("scrolled");
