@@ -893,6 +893,20 @@
     overflow-x: scroll;
     gap: 30px;
 }
+.watch{
+    position: fixed;
+    width: fit-content;
+    overflow-x: scroll;
+    font-size: small;
+    left: 30;
+}
+.watch-options li{
+    font-size: small;
+   
+}
+.watch-options{
+    gap: 20px;
+}
 .slider{
     max-height: 300px;
 }
@@ -1013,11 +1027,27 @@ box-sizing: content-box;
 
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1024px ) and (min-width: 540px){
 .nav-2{
     white-space: nowrap;
     gap: 30px;
+  overflow-x: scroll;
 }
+.watch{
+    position: fixed;
+    width: fit-content;
+    overflow-x: scroll;
+    font-size: small;
+    left: 30;
+}
+.watch-options li{
+    font-size: small;
+   
+}
+.watch-options{
+    gap: 20px;
+}
+
 .nav-2-1{
     margin-left: 10px;
    gap: 10px;
@@ -1027,6 +1057,7 @@ box-sizing: content-box;
 }
 
 #search{
+    display: none;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -1034,10 +1065,14 @@ box-sizing: content-box;
 .explore-watch #play-button{
     bottom: 20%;
 }
-/* #coll-img-div img{
+#coll-img-div img{
     max-width: 200px;
     max-height: 220px;
-} */
+}
+#img-div img{
+    max-width: 200px;
+    max-height: 220px;
+}
 #rightBtns{
     left: 98%;
 }
